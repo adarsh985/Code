@@ -3,138 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Modern Web</title>
-    <!-- Use Inter font for a modern look -->
+    <title>Adarsh Singh - Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
-
-        body {
-            /* Sleek dark gradient background */
-            background: linear-gradient(135deg, #12121c 0%, #080812 100%);
-            color: #ffffff;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow-x: hidden;
-        }
-
-        /* Glassmorphism container */
-        .container {
-            text-align: center;
-            padding: 3rem;
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(16px);
-            border-radius: 24px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-            max-width: 600px;
-            width: 90%;
-            transform: translateY(0);
-            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
-            animation: fadeIn 1s ease-out forwards;
-            opacity: 0;
-        }
-
-        /* Hover effect on container */
-        .container:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Gradient text for heading */
-        h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            line-height: 1.2;
-            letter-spacing: -1px;
-        }
-
-        p {
-            font-size: 1.1rem;
-            font-weight: 300;
-            color: #9ba1b0;
-            margin-bottom: 2.5rem;
-            line-height: 1.6;
-        }
-
-        /* Modern interactive button */
-        .cta-button {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            font-size: 1rem;
-            font-weight: 600;
-            color: #ffffff;
-            background: linear-gradient(45deg, #4facfe, #00f2fe);
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 242, 254, 0.3);
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Shine effect on button hover */
-        .cta-button::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 50%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-            transform: skewX(-20deg);
-            transition: left 0.5s ease;
-        }
-
-        .cta-button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 25px rgba(0, 242, 254, 0.5);
-        }
-
-        .cta-button:hover::after {
-            left: 150%;
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 2.2rem;
-            }
-            .container {
-                padding: 2rem 1.5rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Next-Gen Web Design</h1>
-        <p>This is a single-file modern HTML and CSS template. It features glassmorphism, smooth gradient text, and delightful micro-animations crafted just for you.</p>
-        <a href="#" class="cta-button">Get Started</a>
-    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home" class="logo">Adarsh<span style="color: #00f2fe;">.</span></a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="reveal">
+            <h1>Hi, I'm <span class="highlight">Adarsh Singh</span></h1>
+            <p>I am <span class="dynamic-txt highlight" style="font-weight: 600;"></span></p>
+            <p style="margin-top: -1.5rem;">I build scalable, modern applications and dynamic web experiences.</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="cta-button">View My Work</a>
+                <a href="#contact" class="cta-button outline">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about reveal">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-text glass" style="padding: 2.5rem; border-radius: 20px;">
+                <p>Hello! I'm Adarsh Singh, a passionate developer who loves solving complex problems with clean and efficient code.</p>
+                <p>My journey in programming has equipped me with a versatile skill set, allowing me to tackle everything from robust back-end systems to responsive front-end designs. Whether it's crafting a high-performance C++ algorithm or querying a MySQL database, I'm always up for the challenge.</p>
+            </div>
+            <div class="about-stats">
+                <div class="stat-box glass">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label" style="color: #9ba1b0;">Projects</div>
+                </div>
+                <div class="stat-box glass">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label" style="color: #9ba1b0;">Core Tech</div>
+                </div>
+                <div class="stat-box glass">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label" style="color: #9ba1b0;">Commitment</div>
+                </div>
+                <div class="stat-box glass">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label" style="color: #9ba1b0;">Learner</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills reveal">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card glass reveal">
+                <div class="skill-icon">CPP</div>
+                <div class="skill-name">C++</div>
+            </div>
+            <div class="skill-card glass reveal">
+                <div class="skill-icon">C</div>
+                <div class="skill-name">C</div>
+            </div>
+            <div class="skill-card glass reveal">
+                <div class="skill-icon">Py</div>
+                <div class="skill-name">Python</div>
+            </div>
+            <div class="skill-card glass reveal">
+                <div class="skill-icon">DB</div>
+                <div class="skill-name">MySQL</div>
+            </div>
+            <div class="skill-card glass reveal">
+                <div class="skill-icon">&lt;/&gt;</div>
+                <div class="skill-name">HTML/CSS/JS</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects reveal">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card glass reveal">
+                <div class="project-img">
+                    🤖
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">AI Chat Interface</h3>
+                    <p class="project-desc">A modern, responsive chat interface built using vanilla web technologies, interacting with custom backends.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML/CSS</span>
+                        <span class="tag">Python</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="project-card glass reveal">
+                <div class="project-img">
+                    📊
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Database Manager</h3>
+                    <p class="project-desc">A fast backend utility in C++ that interfaces directly with local and remote MySQL databases.</p>
+                    <div class="project-tags">
+                        <span class="tag">C++</span>
+                        <span class="tag">MySQL</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="project-card glass reveal">
+                <div class="project-img">
+                    🌐
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Portfolio App</h3>
+                    <p class="project-desc">A dynamic, responsive glassmorphic portfolio demonstrating advanced front-end skills.</p>
+                    <div class="project-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">CSS3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact reveal">
+        <h2 class="section-title">Get In Touch</h2>
+        <p>I'm currently open for new opportunities or exciting collaborations. Have a question or just want to say hi? I'll try my best to get back to you!</p>
+        <a href="mailto:hello@example.com" class="cta-button">Say Hello</a>
+        
+        <div class="social-links">
+            <a href="https://linkedin.com/in/adarshsingh" target="_blank" class="social-icon glass" title="LinkedIn">in</a>
+            <a href="https://github.com/adarsh985" target="_blank" class="social-icon glass" title="GitHub">gh</a>
+            <a href="https://twitter.com/adarshsingh" target="_blank" class="social-icon glass" title="Twitter">tw</a>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
